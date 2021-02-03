@@ -46,7 +46,7 @@ class PositionV2:
         self.positionSide = ""
         self.entryPrice = 0.0
         self.maxNotional = 0.0
-
+        self.positionAmt = 0.0
     @staticmethod
     def json_parse(json_data):
         result = PositionV2()
@@ -61,6 +61,7 @@ class PositionV2:
         result.positionSide = json_data.get_string("positionSide")
         result.entryPrice = json_data.get_float("entryPrice")
         result.maxNotional = json_data.get_float("maxNotional")
+        result.positionAmt = json_data.get_float("positionAmt")
         return result
 
 
